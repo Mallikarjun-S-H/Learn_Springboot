@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+		<bean id="address" class="com.learnspring.autowiring.Address">
+		<property name="id" value="001" />
+		<property name="location" value="xyz" />
+		<property name="state" value="karnataka" />
+		<property name="country" value="India" />
+	</bean>
+	
+<!--	<bean id="Ram" class="com.learnspring.autowiring.Employee" autowire="byName">
+		<property name="id" value="001" />
+		<property name="name" value="Ram" />
+		<property name="salary" value="10000" />
+	</bean>-->
+	
+		<!--<bean id="Ram" class="com.learnspring.autowiring.Employee" autowire="byType">
+			<property name="id" value="001" />
+			<property name="name" value="Ram" />
+			<property name="salary" value="10000" />
+		</bean>-->
+		
+		<bean id="Ram" class="com.learnspring.autowiring.Employee" autowire="constructor">
+			<constructor-arg name="id" value="001" />
+			<constructor-arg name="name" value="Ram" />
+			<constructor-arg name="salary" value="10000" />
+		</bean>
+	</beans>

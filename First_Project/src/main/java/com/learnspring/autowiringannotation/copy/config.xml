@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	
+	xsi:schemaLocation="
+	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+    ">
+	<context:component-scan base-package="com.learnspring.autowiring"/>
+
+	<context:annotation-config />
+	<bean id="ad" class="com.learnspring.autowiringannotation.copy.Address">
+		<property name="id" value="001" />
+		<property name="location" value="xyz" />
+		<property name="state" value="karnataka" />
+		<property name="country" value="India" />
+	</bean>
+	<bean id="ad2" class="com.learnspring.autowiringannotation.copy.Address">
+		<property name="id" value="002" />
+		<property name="location" value="abc" />
+		<property name="state" value="MP" />
+		<property name="country" value="Mumbai" />
+	</bean>
+		<bean id="Ram" class="com.learnspring.autowiringannotation.copy.Employee">
+			<property name="id" value="001" />
+			<property name="name" value="Ram" />
+			<property name="salary" value="10000" />
+		</bean>
+	</beans>

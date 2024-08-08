@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="st1" class="com.learnspring.collections.Student">
+		<property name="name" value="akash" />
+
+		<property name="address">
+			<list>
+				<value>India</value>
+				<value>USA</value>
+				<value>UK</value>
+			</list>
+		</property>
+
+		<property name="phnum">
+			<set>
+				<value>00000</value>
+				<value>1111</value>
+				<value>2222</value>
+			</set>
+		</property>
+
+		<property name="course">
+			<map>
+				<entry key="java" value="2months" />
+				<entry key="javascript" value="3months" />
+				<entry key="springboot" value="1month"></entry>
+			</map>
+		</property>
+	</bean>
+
+</beans>
